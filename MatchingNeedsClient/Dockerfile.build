@@ -3,7 +3,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0
 WORKDIR /app
 
-COPY MatchingNeedsClient.csproj MatchingNeedsClient.csproj
-RUN dotnet restore MatchingNeedsClient.csproj
+COPY MatchingNeedsClient/MatchingNeedsClient.csproj MatchingNeedsClient/MatchingNeedsClient.csproj
+RUN dotnet restore MatchingNeedsClient/MatchingNeedsClient.csproj
 COPY . .
 RUN dotnet publish -c Release -o /output ---restore --nologo
